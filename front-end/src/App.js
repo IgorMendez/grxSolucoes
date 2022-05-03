@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CmiProvider from './context/cmiProvider';
-import Index from './pages/login';
+import Index from './pages';
 
 function App() {
   return (
