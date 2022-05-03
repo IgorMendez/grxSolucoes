@@ -11,7 +11,7 @@ Desafio coleta - GRX Soluções;
 ## Etapa mais desafiadora:
 
 Foi ordenar a tabela das quantidades por ordem crescente, eu havia feito a lógica antes de pensar nisso e tiver que encontrar um jeito
-para ordena-los, inseri todos os dados já em um componente react e ordenei dentro de um array, fazendo assim a renderização pelo maior
+para ordena-los, inseri todos os dados já serializado pela api em um componente react e ordenei dentro de um array, fazendo assim a renderização pelo maior
 número.
 
 ## Feedback:
