@@ -1,6 +1,6 @@
 # GRX
 
-Desafio coleta - GRX;
+Desafio coleta - GRX Soluções;
 
 ## Stacks utilizadas:
 
