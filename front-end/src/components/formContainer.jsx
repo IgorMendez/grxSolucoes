@@ -28,14 +28,14 @@ export default function FormContainer() {
     setSendOrNot(false);
   }, [dataObject]);
 
-  function sendData() {
+  function sendData(data) {
     if (!sendOrNot) {
       return alert('Favor responder todas as perguntas');
     }
     const myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
 
-    const raw = JSON.stringify(dataObject);
+    const raw = JSON.stringify(data);
 
     const options = {
       method: 'POST',
@@ -103,7 +103,9 @@ export default function FormContainer() {
         <label
           htmlFor="logic"
           onClick={(e) => changeColor(e)}
-          role="button"
+          role="radio"
+          aria-checked="false"
+          tabIndex="0"
           className={Style.labelForm}
         >
           <input
@@ -114,6 +116,7 @@ export default function FormContainer() {
             id="logic"
             type="button"
             value="Sim"
+            data-testid="input-radio"
           />
           <input
             onClick={(e) => {
@@ -123,6 +126,7 @@ export default function FormContainer() {
             id="logic"
             type="button"
             value="Não"
+            data-testid="input-radio"
           />
         </label>
         <div
@@ -133,7 +137,9 @@ export default function FormContainer() {
         <label
           htmlFor="challange"
           onClick={(e) => changeColor2(e)}
-          role="button"
+          role="radio"
+          aria-checked="false"
+          tabIndex="0"
           className={Style.labelForm}
         >
           <input
@@ -143,6 +149,7 @@ export default function FormContainer() {
             name="Pergunta 2"
             id="challange"
             type="button"
+            data-testid="input-radio"
             value="Sim"
           />
           <input
@@ -152,6 +159,7 @@ export default function FormContainer() {
             name="Pergunta 2"
             id="challange"
             type="button"
+            data-testid="input-radio"
             value="Não"
           />
         </label>
@@ -217,7 +225,8 @@ export default function FormContainer() {
         >
           <button
             type="button"
-            onClick={() => sendData()}
+            onClick={() => sendData(dataObject)}
+            data-testid="send-button"
           >
             Enviar
 

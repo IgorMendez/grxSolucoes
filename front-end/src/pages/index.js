@@ -6,6 +6,7 @@ export default function Index() {
   return (
     <div>
       <Header />
+      <h1>Desafio Técnico - Coleta GRX Soluções</h1>
       <FormContainer />
     </div>
   );
